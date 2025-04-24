@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		A73D5B2C2DBAC50E00B7FA63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A73D5B132DBAC50D00B7FA63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A73D5B1A2DBAC50D00B7FA63;
+			remoteInfo = DisneyTakeHome;
+		};
+		A73D5B362DBAC50E00B7FA63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A73D5B132DBAC50D00B7FA63 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A73D5B1A2DBAC50D00B7FA63;
+			remoteInfo = DisneyTakeHome;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A73D5B1B2DBAC50D00B7FA63 /* DisneyTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisneyTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A73D5B2B2DBAC50E00B7FA63 /* DisneyTakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyTakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A73D5B352DBAC50E00B7FA63 /* DisneyTakeHomeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisneyTakeHomeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A73D5B1D2DBAC50D00B7FA63 /* DisneyTakeHome */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DisneyTakeHome;
+			sourceTree = "<group>";
+		};
+		A73D5B2E2DBAC50E00B7FA63 /* DisneyTakeHomeTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DisneyTakeHomeTests;
+			sourceTree = "<group>";
+		};
+		A73D5B382DBAC50E00B7FA63 /* DisneyTakeHomeUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DisneyTakeHomeUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A73D5B182DBAC50D00B7FA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A73D5B282DBAC50E00B7FA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A73D5B322DBAC50E00B7FA63 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A73D5B122DBAC50D00B7FA63 = {
+			isa = PBXGroup;
+			children = (
+				A73D5B1D2DBAC50D00B7FA63 /* DisneyTakeHome */,
+				A73D5B2E2DBAC50E00B7FA63 /* DisneyTakeHomeTests */,
+				A73D5B382DBAC50E00B7FA63 /* DisneyTakeHomeUITests */,
+				A73D5B1C2DBAC50D00B7FA63 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A73D5B1C2DBAC50D00B7FA63 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A73D5B1B2DBAC50D00B7FA63 /* DisneyTakeHome.app */,
+				A73D5B2B2DBAC50E00B7FA63 /* DisneyTakeHomeTests.xctest */,
+				A73D5B352DBAC50E00B7FA63 /* DisneyTakeHomeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A73D5B1A2DBAC50D00B7FA63 /* DisneyTakeHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A73D5B3F2DBAC50E00B7FA63 /* Build configuration list for PBXNativeTarget "DisneyTakeHome" */;
+			buildPhases = (
+				A73D5B172DBAC50D00B7FA63 /* Sources */,
+				A73D5B182DBAC50D00B7FA63 /* Frameworks */,
+				A73D5B192DBAC50D00B7FA63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A73D5B1D2DBAC50D00B7FA63 /* DisneyTakeHome */,
+			);
+			name = DisneyTakeHome;
+			packageProductDependencies = (
+			);
+			productName = DisneyTakeHome;
+			productReference = A73D5B1B2DBAC50D00B7FA63 /* DisneyTakeHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A73D5B2A2DBAC50E00B7FA63 /* DisneyTakeHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A73D5B422DBAC50E00B7FA63 /* Build configuration list for PBXNativeTarget "DisneyTakeHomeTests" */;
+			buildPhases = (
+				A73D5B272DBAC50E00B7FA63 /* Sources */,
+				A73D5B282DBAC50E00B7FA63 /* Frameworks */,
+				A73D5B292DBAC50E00B7FA63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A73D5B2D2DBAC50E00B7FA63 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A73D5B2E2DBAC50E00B7FA63 /* DisneyTakeHomeTests */,
+			);
+			name = DisneyTakeHomeTests;
+			packageProductDependencies = (
+			);
+			productName = DisneyTakeHomeTests;
+			productReference = A73D5B2B2DBAC50E00B7FA63 /* DisneyTakeHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A73D5B342DBAC50E00B7FA63 /* DisneyTakeHomeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A73D5B452DBAC50E00B7FA63 /* Build configuration list for PBXNativeTarget "DisneyTakeHomeUITests" */;
+			buildPhases = (
+				A73D5B312DBAC50E00B7FA63 /* Sources */,
+				A73D5B322DBAC50E00B7FA63 /* Frameworks */,
+				A73D5B332DBAC50E00B7FA63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A73D5B372DBAC50E00B7FA63 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A73D5B382DBAC50E00B7FA63 /* DisneyTakeHomeUITests */,
+			);
+			name = DisneyTakeHomeUITests;
+			packageProductDependencies = (
+			);
+			productName = DisneyTakeHomeUITests;
+			productReference = A73D5B352DBAC50E00B7FA63 /* DisneyTakeHomeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A73D5B132DBAC50D00B7FA63 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A73D5B1A2DBAC50D00B7FA63 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					A73D5B2A2DBAC50E00B7FA63 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A73D5B1A2DBAC50D00B7FA63;
+					};
+					A73D5B342DBAC50E00B7FA63 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = A73D5B1A2DBAC50D00B7FA63;
+					};
+				};
+			};
+			buildConfigurationList = A73D5B162DBAC50D00B7FA63 /* Build configuration list for PBXProject "DisneyTakeHome" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A73D5B122DBAC50D00B7FA63;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A73D5B1C2DBAC50D00B7FA63 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A73D5B1A2DBAC50D00B7FA63 /* DisneyTakeHome */,
+				A73D5B2A2DBAC50E00B7FA63 /* DisneyTakeHomeTests */,
+				A73D5B342DBAC50E00B7FA63 /* DisneyTakeHomeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A73D5B192DBAC50D00B7FA63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A73D5B292DBAC50E00B7FA63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A73D5B332DBAC50E00B7FA63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A73D5B172DBAC50D00B7FA63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A73D5B272DBAC50E00B7FA63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A73D5B312DBAC50E00B7FA63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A73D5B2D2DBAC50E00B7FA63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A73D5B1A2DBAC50D00B7FA63 /* DisneyTakeHome */;
+			targetProxy = A73D5B2C2DBAC50E00B7FA63 /* PBXContainerItemProxy */;
+		};
+		A73D5B372DBAC50E00B7FA63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A73D5B1A2DBAC50D00B7FA63 /* DisneyTakeHome */;
+			targetProxy = A73D5B362DBAC50E00B7FA63 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A73D5B3D2DBAC50E00B7FA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A73D5B3E2DBAC50E00B7FA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A73D5B402DBAC50E00B7FA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DisneyTakeHome/Preview Content\"";
+				DEVELOPMENT_TEAM = 5E3MK9462Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.disneytakehome.DisneyTakeHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A73D5B412DBAC50E00B7FA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"DisneyTakeHome/Preview Content\"";
+				DEVELOPMENT_TEAM = 5E3MK9462Q;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.disneytakehome.DisneyTakeHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A73D5B432DBAC50E00B7FA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5E3MK9462Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.disneytakehome.DisneyTakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisneyTakeHome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DisneyTakeHome";
+			};
+			name = Debug;
+		};
+		A73D5B442DBAC50E00B7FA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5E3MK9462Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.disneytakehome.DisneyTakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisneyTakeHome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DisneyTakeHome";
+			};
+			name = Release;
+		};
+		A73D5B462DBAC50E00B7FA63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5E3MK9462Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.disneytakehome.DisneyTakeHomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DisneyTakeHome;
+			};
+			name = Debug;
+		};
+		A73D5B472DBAC50E00B7FA63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5E3MK9462Q;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.disneytakehome.DisneyTakeHomeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DisneyTakeHome;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A73D5B162DBAC50D00B7FA63 /* Build configuration list for PBXProject "DisneyTakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A73D5B3D2DBAC50E00B7FA63 /* Debug */,
+				A73D5B3E2DBAC50E00B7FA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A73D5B3F2DBAC50E00B7FA63 /* Build configuration list for PBXNativeTarget "DisneyTakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A73D5B402DBAC50E00B7FA63 /* Debug */,
+				A73D5B412DBAC50E00B7FA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A73D5B422DBAC50E00B7FA63 /* Build configuration list for PBXNativeTarget "DisneyTakeHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A73D5B432DBAC50E00B7FA63 /* Debug */,
+				A73D5B442DBAC50E00B7FA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A73D5B452DBAC50E00B7FA63 /* Build configuration list for PBXNativeTarget "DisneyTakeHomeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A73D5B462DBAC50E00B7FA63 /* Debug */,
+				A73D5B472DBAC50E00B7FA63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A73D5B132DBAC50D00B7FA63 /* Project object */;
+}
