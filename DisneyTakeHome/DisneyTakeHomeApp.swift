@@ -11,7 +11,7 @@ import SwiftUI
 struct DisneyTakeHomeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().background(Color.green.opacity(0.2))
         }
     }
 }

@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A73D5B4F2DBAC5A500B7FA63 /* OpenAPIRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = A73D5B4E2DBAC5A500B7FA63 /* OpenAPIRuntime */; };
+		A73D5B522DBAC5B600B7FA63 /* OpenAPIURLSession in Frameworks */ = {isa = PBXBuildFile; productRef = A73D5B512DBAC5B600B7FA63 /* OpenAPIURLSession */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A73D5B2C2DBAC50E00B7FA63 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A73D5B522DBAC5B600B7FA63 /* OpenAPIURLSession in Frameworks */,
+				A73D5B4F2DBAC5A500B7FA63 /* OpenAPIRuntime in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,12 +113,15 @@
 			buildRules = (
 			);
 			dependencies = (
+				A73D5B542DBAC5CC00B7FA63 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				A73D5B1D2DBAC50D00B7FA63 /* DisneyTakeHome */,
 			);
 			name = DisneyTakeHome;
 			packageProductDependencies = (
+				A73D5B4E2DBAC5A500B7FA63 /* OpenAPIRuntime */,
+				A73D5B512DBAC5B600B7FA63 /* OpenAPIURLSession */,
 			);
 			productName = DisneyTakeHome;
 			productReference = A73D5B1B2DBAC50D00B7FA63 /* DisneyTakeHome.app */;
@@ -195,6 +205,11 @@
 			);
 			mainGroup = A73D5B122DBAC50D00B7FA63;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				A73D5B4C2DBAC58A00B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */,
+				A73D5B4D2DBAC5A500B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */,
+				A73D5B502DBAC5B600B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A73D5B1C2DBAC50D00B7FA63 /* Products */;
 			projectDirPath = "";
@@ -265,6 +280,10 @@
 			isa = PBXTargetDependency;
 			target = A73D5B1A2DBAC50D00B7FA63 /* DisneyTakeHome */;
 			targetProxy = A73D5B362DBAC50E00B7FA63 /* PBXContainerItemProxy */;
+		};
+		A73D5B542DBAC5CC00B7FA63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = A73D5B532DBAC5CC00B7FA63 /* OpenAPIGenerator */;
 		};
 /* End PBXTargetDependency section */
 
@@ -399,6 +418,7 @@
 				DEVELOPMENT_TEAM = 5E3MK9462Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Take Home Test";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -428,6 +448,7 @@
 				DEVELOPMENT_TEAM = 5E3MK9462Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Take Home Test";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +579,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A73D5B4C2DBAC58A00B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-generator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.7.2;
+			};
+		};
+		A73D5B4D2DBAC5A500B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/apple/swift-openapi-runtime";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
+		A73D5B502DBAC5B600B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-openapi-urlsession";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A73D5B4E2DBAC5A500B7FA63 /* OpenAPIRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A73D5B4D2DBAC5A500B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-runtime" */;
+			productName = OpenAPIRuntime;
+		};
+		A73D5B512DBAC5B600B7FA63 /* OpenAPIURLSession */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A73D5B502DBAC5B600B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-urlsession" */;
+			productName = OpenAPIURLSession;
+		};
+		A73D5B532DBAC5CC00B7FA63 /* OpenAPIGenerator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A73D5B4C2DBAC58A00B7FA63 /* XCRemoteSwiftPackageReference "swift-openapi-generator" */;
+			productName = "plugin:OpenAPIGenerator";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A73D5B132DBAC50D00B7FA63 /* Project object */;
 }

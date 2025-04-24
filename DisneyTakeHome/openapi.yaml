@@ -14,6 +14,26 @@ paths:
         in: query
         schema:
           type: string
+      - name: unapproved
+        in: query
+        schema:
+          type: boolean
+      - name: page
+        in: query
+        schema:
+          type: integer
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: sfw
+        in: query
+        schema:
+          type: boolean
+      - name: order_by
+        in: query
+        schema:
+          type: string
       responses:
         '200':
           description: Returns search results for anime
@@ -201,13 +221,6 @@ components:
         type:
           description: Anime Type
           type: string
-          enum:
-          - TV
-          - OVA
-          - Movie
-          - Special
-          - ONA
-          - Music
           nullable: true
         source:
           description: Original Material/Source adapted from
