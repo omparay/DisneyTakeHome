@@ -1,0 +1,371 @@
+openapi: '3.1.0'
+info:
+  title: Jikan API
+  version: 4.0.0
+servers:
+  - url: https://api.jikan.moe/v4
+    description: Jikan REST API
+paths:
+  /anime:
+    get:
+      operationId: getAnimeSearch
+      parameters:
+      - name: q
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Returns search results for anime
+          content:
+            application/json:
+              schema:
+                "$ref": "#/components/schemas/anime_search"
+        '400':
+          description: 'Error: Bad request. When required parameters were not supplied.'
+components:
+  schemas:
+    anime_images:
+      properties:
+        jpg:
+          description: Available images in JPG
+          properties:
+            image_url:
+              description: Image URL JPG
+              type: string
+              nullable: true
+            small_image_url:
+              description: Small Image URL JPG
+              type: string
+              nullable: true
+            large_image_url:
+              description: Image URL JPG
+              type: string
+              nullable: true
+          type: object
+        webp:
+          description: Available images in WEBP
+          properties:
+            image_url:
+              description: Image URL WEBP
+              type: string
+              nullable: true
+            small_image_url:
+              description: Small Image URL WEBP
+              type: string
+              nullable: true
+            large_image_url:
+              description: Image URL WEBP
+              type: string
+              nullable: true
+          type: object
+      type: object
+    trailer_base:
+      description: Youtube Details
+      properties:
+        youtube_id:
+          description: YouTube ID
+          type: string
+          nullable: true
+        url:
+          description: YouTube URL
+          type: string
+          nullable: true
+        embed_url:
+          description: Parsed Embed URL
+          type: string
+          nullable: true
+      type: object
+    broadcast:
+      description: Broadcast Details
+      properties:
+        day:
+          description: Day of the week
+          type: string
+          nullable: true
+        time:
+          description: Time in 24 hour format
+          type: string
+          nullable: true
+        timezone:
+          description: Timezone (Tz Database format https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+          type: string
+          nullable: true
+        string:
+          description: Raw parsed broadcast string
+          type: string
+          nullable: true
+      type: object
+    daterange:
+      description: Date range
+      properties:
+        from:
+          description: Date ISO8601
+          type: string
+          nullable: true
+        to:
+          description: Date ISO8601
+          type: string
+          nullable: true
+        prop:
+          description: Date Prop
+          properties:
+            from:
+              description: Date Prop From
+              properties:
+                day:
+                  description: Day
+                  type: integer
+                  nullable: true
+                month:
+                  description: Month
+                  type: integer
+                  nullable: true
+                year:
+                  description: Year
+                  type: integer
+                  nullable: true
+              type: object
+            to:
+              description: Date Prop To
+              properties:
+                day:
+                  description: Day
+                  type: integer
+                  nullable: true
+                month:
+                  description: Month
+                  type: integer
+                  nullable: true
+                year:
+                  description: Year
+                  type: integer
+                  nullable: true
+              type: object
+            string:
+              description: Raw parsed string
+              type: string
+              nullable: true
+          type: object
+      type: object
+    title:
+      properties:
+        type:
+          description: Title type
+          type: string
+        title:
+          description: Title value
+          type: string
+      type: object
+    anime:
+      description: Anime Resource
+      properties:
+        mal_id:
+          description: MyAnimeList ID
+          type: integer
+        url:
+          description: MyAnimeList URL
+          type: string
+        images:
+          "$ref": "#/components/schemas/anime_images"
+        trailer:
+          "$ref": "#/components/schemas/trailer_base"
+        approved:
+          description: Whether the entry is pending approval on MAL or not
+          type: boolean
+        titles:
+          description: All titles
+          type: array
+          items:
+            "$ref": "#/components/schemas/title"
+        title:
+          description: Title
+          type: string
+          deprecated: true
+        title_english:
+          description: English Title
+          type: string
+          nullable: true
+          deprecated: true
+        title_japanese:
+          description: Japanese Title
+          type: string
+          nullable: true
+          deprecated: true
+        title_synonyms:
+          description: Other Titles
+          type: array
+          items:
+            type: string
+          deprecated: true
+        type:
+          description: Anime Type
+          type: string
+          enum:
+          - TV
+          - OVA
+          - Movie
+          - Special
+          - ONA
+          - Music
+          nullable: true
+        source:
+          description: Original Material/Source adapted from
+          type: string
+          nullable: true
+        episodes:
+          description: Episode count
+          type: integer
+          nullable: true
+        status:
+          description: Airing status
+          type: string
+          enum:
+          - Finished Airing
+          - Currently Airing
+          - Not yet aired
+          nullable: true
+        airing:
+          description: Airing boolean
+          type: boolean
+        aired:
+          "$ref": "#/components/schemas/daterange"
+        duration:
+          description: Parsed raw duration
+          type: string
+          nullable: true
+        rating:
+          description: Anime audience rating
+          type: string
+          enum:
+          - G - All Ages
+          - PG - Children
+          - PG-13 - Teens 13 or older
+          - R - 17+ (violence & profanity)
+          - R+ - Mild Nudity
+          - Rx - Hentai
+          nullable: true
+        score:
+          description: Score
+          type: number
+          format: float
+          nullable: true
+        scored_by:
+          description: Number of users
+          type: integer
+          nullable: true
+        rank:
+          description: Ranking
+          type: integer
+          nullable: true
+        popularity:
+          description: Popularity
+          type: integer
+          nullable: true
+        members:
+          description: Number of users who have added this entry to their list
+          type: integer
+          nullable: true
+        favorites:
+          description: Number of users who have favorited this entry
+          type: integer
+          nullable: true
+        synopsis:
+          description: Synopsis
+          type: string
+          nullable: true
+        background:
+          description: Background
+          type: string
+          nullable: true
+        season:
+          description: Season
+          type: string
+          enum:
+          - summer
+          - winter
+          - spring
+          - fall
+          nullable: true
+        year:
+          description: Year
+          type: integer
+          nullable: true
+        broadcast:
+          "$ref": "#/components/schemas/broadcast"
+        producers:
+          type: array
+          items:
+            "$ref": "#/components/schemas/mal_url"
+        licensors:
+          type: array
+          items:
+            "$ref": "#/components/schemas/mal_url"
+        studios:
+          type: array
+          items:
+            "$ref": "#/components/schemas/mal_url"
+        genres:
+          type: array
+          items:
+            "$ref": "#/components/schemas/mal_url"
+        explicit_genres:
+          type: array
+          items:
+            "$ref": "#/components/schemas/mal_url"
+        themes:
+          type: array
+          items:
+            "$ref": "#/components/schemas/mal_url"
+        demographics:
+          type: array
+          items:
+            "$ref": "#/components/schemas/mal_url"
+      type: object
+    mal_url:
+      description: Parsed URL Data
+      properties:
+        mal_id:
+          description: MyAnimeList ID
+          type: integer
+        type:
+          description: Type of resource
+          type: string
+        name:
+          description: Resource Name/Title
+          type: string
+        url:
+          description: MyAnimeList URL
+          type: string
+      type: object
+    anime_search:
+      description: Anime Collection Resource
+      allOf:
+      - properties:
+          data:
+            type: array
+            items:
+              "$ref": "#/components/schemas/anime"
+        type: object
+      - "$ref": "#/components/schemas/pagination_plus"
+    pagination_plus:
+      properties:
+        pagination:
+          properties:
+            last_visible_page:
+              type: integer
+            has_next_page:
+              type: boolean
+            current_page:
+              type: integer
+            items:
+              properties:
+                count:
+                  type: integer
+                total:
+                  type: integer
+                per_page:
+                  type: integer
+              type: object
+          type: object
+      type: object
