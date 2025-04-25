@@ -7,15 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @Bindable var viewModel = ContentViewModel()
+@MainActor
+struct SearchView: View {
+    @StateObject var viewModel = ContentViewModel()
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Search:")
                 VStack {
                     TextField("Enter search text", text: $viewModel.searchText)
-                        .onChange(of: viewModel.searchText) {
+                        .onReceive(viewModel.$searchText.debounce(for: .seconds(2), scheduler: DispatchQueue.main)) {
+                            guard !$0.isEmpty else { return }
                             Task {
                                 await viewModel.performSearch()
                             }
@@ -31,7 +33,25 @@ struct ContentView: View {
                     ListItemView(anime: $0)
                 }
                 .scrollContentBackground(.hidden)
-                PagingControls(viewModel: viewModel)
+                HStack {
+                    Button {
+                        Task {
+                            await viewModel.previousPage()
+                        }
+                    } label: {
+                        Image(systemName: "arrowshape.backward.circle.fill")
+                    }
+                    Spacer()
+                    Text("Page \(viewModel.page) of \(viewModel.totalPages)")
+                    Spacer()
+                    Button {
+                        Task {
+                            await viewModel.nextPage()
+                        }
+                    } label: {
+                        Image(systemName: "arrowshape.forward.circle.fill")
+                    }
+                }
             }
             Spacer()
         }
@@ -63,31 +83,6 @@ struct ListItemView: View {
     }
 }
 
-struct PagingControls: View {
-    let viewModel: ContentViewModel
-    var body: some View {
-        HStack {
-            Button {
-                Task {
-                    await viewModel.previousPage()
-                }
-            } label: {
-                Image(systemName: "arrowshape.backward.circle.fill")
-            }
-            Spacer()
-            Text("Page \(viewModel.page) of \(viewModel.totalPages)")
-            Spacer()
-            Button {
-                Task {
-                    await viewModel.nextPage()
-                }
-            } label: {
-                Image(systemName: "arrowshape.forward.circle.fill")
-            }
-        }
-    }
-}
-
 #Preview {
-    ContentView().background(Color.green.opacity(0.2))
+    SearchView().background(Color.green.opacity(0.2))
 }
