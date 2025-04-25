@@ -13,7 +13,7 @@ import OpenAPIURLSession
 
 struct DisneyTakeHomeTests {
 
-    @Test func example() async throws {
+    @Test func testClient() async throws {
         let client = Client(
             serverURL: try Servers.Server1.url(),
             transport: URLSessionTransport()
