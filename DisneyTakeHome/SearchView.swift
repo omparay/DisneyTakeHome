@@ -22,6 +22,7 @@ struct SearchView: View {
                                 await viewModel.performSearch()
                             }
                         }
+                        .accessibilityIdentifier("search_text_field")
                     Rectangle()
                         .frame(height: 1)
                         .foregroundColor(.black)
@@ -32,6 +33,7 @@ struct SearchView: View {
                 List(viewModel.searchResults, id: \.malId) {
                     ListItemView(anime: $0)
                 }
+                .accessibilityIdentifier("search_list_results")
                 .scrollContentBackground(.hidden)
                 HStack {
                     Button {
@@ -41,6 +43,7 @@ struct SearchView: View {
                     } label: {
                         Image(systemName: "arrowshape.backward.circle.fill")
                     }
+                    .accessibilityIdentifier("search_button_previous")
                     Spacer()
                     Text("Page \(viewModel.page) of \(viewModel.totalPages)")
                     Spacer()
@@ -51,6 +54,7 @@ struct SearchView: View {
                     } label: {
                         Image(systemName: "arrowshape.forward.circle.fill")
                     }
+                    .accessibilityIdentifier("search_button_next")
                 }
             }
             Spacer()

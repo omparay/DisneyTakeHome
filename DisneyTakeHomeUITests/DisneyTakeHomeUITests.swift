@@ -23,12 +23,29 @@ final class DisneyTakeHomeUITests: XCTestCase {
     }
 
     @MainActor
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func testSearch() throws {
         let app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let launchScreenshot = XCUIScreen.main.screenshot()
+        let launchAttachment = XCTAttachment(screenshot: launchScreenshot)
+        launchAttachment.lifetime = .keepAlways
+        add(launchAttachment)
+        
+        let textField = app.textFields["search_text_field"]
+        _ = textField.waitForExistence(timeout: 5)
+        textField.tap()
+        textField.typeText("rahxephon")
+        let searchScreenShot = XCUIScreen.main.screenshot()
+        let searchAttachment = XCTAttachment(screenshot: searchScreenShot)
+        searchAttachment.lifetime = .keepAlways
+        add(searchAttachment)
+        
+        let resultsList = app.tables["results_list"]
+        _ = resultsList.waitForExistence(timeout: 10)
+        let resultsScreenShot = XCUIScreen.main.screenshot()
+        let resultsAttachment = XCTAttachment(screenshot: resultsScreenShot)
+        resultsAttachment.lifetime = .keepAlways
+        add(resultsAttachment)
     }
 
     @MainActor
