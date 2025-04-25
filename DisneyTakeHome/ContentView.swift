@@ -28,7 +28,7 @@ struct ContentView: View {
             }
             if let totalPages = viewModel.pagingState.lastVisiblePage, totalPages > 0 && !viewModel.searchText.isEmpty {
                 List(viewModel.searchResults, id: \.malId) {
-                    ListView(anime: $0)
+                    ListItemView(anime: $0)
                 }
                 .scrollContentBackground(.hidden)
                 PagingControls(viewModel: viewModel)
@@ -39,16 +39,25 @@ struct ContentView: View {
     }
 }
 
-struct ListView: View {
+struct ListItemView: View {
     let anime: Components.Schemas.Anime
     @State var title: String = ""
+    @State var imageUrl: URL = URL(string: "https://static.thenounproject.com/png/1400397-200.png")!
     var body: some View {
-        Text(title)
+        VStack(alignment: .leading) {
+            HStack(alignment: .top){
+                AsyncImage(url: imageUrl)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 64, height: 64)
+                Text(title)
+            }
+        }
         .listRowBackground(Color.clear)
         .background(.clear)
         .onAppear {
             Task() {
                 title = await anime.getDefaultTitle()
+                imageUrl = await anime.getSmallImageURL()
             }
         }
     }

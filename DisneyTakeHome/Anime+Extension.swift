@@ -5,6 +5,7 @@
 //  Created by Oliver Paray on 4/24/25.
 //
 
+import Foundation
 
 extension Components.Schemas.Anime {
     
@@ -19,6 +20,18 @@ extension Components.Schemas.Anime {
             return defaultTitle.title ?? String()
         } else {
             return titles.first?.title  ?? String()
+        }
+    }
+    
+    func getDescription() -> String {
+        return self.synopsis ?? String()
+    }
+    
+    func getSmallImageURL() async -> URL {
+        if let smallImageUrl = images?.jpg?.smallImageUrl, let result = URL(string: smallImageUrl) {
+            return result
+        } else {
+            return URL(string:"https://static.thenounproject.com/png/1400397-200.png")!
         }
     }
 }
