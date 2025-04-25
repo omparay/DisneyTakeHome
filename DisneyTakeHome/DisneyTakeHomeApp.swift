@@ -11,7 +11,9 @@ import SwiftUI
 struct DisneyTakeHomeApp: App {
     var body: some Scene {
         WindowGroup {
-            SearchView().background(Color.green.opacity(0.2))
+            NavigationView {
+                SearchView().background(Color.green.opacity(0.3))
+            }
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 import OpenAPIRuntime
 import OpenAPIURLSession
 
-class ContentViewModel: ObservableObject {
+class SearchViewModel: ObservableObject {
     @Published var searchText: String = ""
     @Published var showNSFW: Bool = false
     @Published var showUnapproved: Bool = false
@@ -19,6 +19,7 @@ class ContentViewModel: ObservableObject {
     @Published var searchResults = [Components.Schemas.Anime]()
     @Published var pagingState: Components.Schemas.PaginationPlus.PaginationPayload = .init()
     @Published var genericDisplay: String = ""
+    @Published var selectedAnime: Components.Schemas.Anime?
     var totalPages: Int {
         get {
             if let maxPages = pagingState.lastVisiblePage {

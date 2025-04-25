@@ -27,8 +27,16 @@ extension Components.Schemas.Anime {
         return self.synopsis ?? String()
     }
     
-    func getSmallImageURL() async -> URL {
+    func getSmallImageURL() -> URL {
         if let smallImageUrl = images?.jpg?.smallImageUrl, let result = URL(string: smallImageUrl) {
+            return result
+        } else {
+            return URL(string:"https://static.thenounproject.com/png/1400397-200.png")!
+        }
+    }
+    
+    func getImageUrl() -> URL {
+        if let imageUrl = images?.jpg?.imageUrl, let result = URL(string: imageUrl) {
             return result
         } else {
             return URL(string:"https://static.thenounproject.com/png/1400397-200.png")!

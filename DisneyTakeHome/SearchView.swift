@@ -9,7 +9,7 @@ import SwiftUI
 
 @MainActor
 struct SearchView: View {
-    @StateObject var viewModel = ContentViewModel()
+    @StateObject var viewModel = SearchViewModel()
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -64,25 +64,26 @@ struct ListItemView: View {
     @State var title: String = ""
     @State var imageUrl: URL = URL(string: "https://static.thenounproject.com/png/1400397-200.png")!
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack(alignment: .top){
-                AsyncImage(url: imageUrl)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 64, height: 64)
-                Text(title)
+        NavigationLink(destination: DetailsView(animeToDisplay: anime)) {
+            VStack(alignment: .leading) {
+                HStack(alignment: .top){
+                    AsyncImage(url: imageUrl)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 64, height: 64)
+                    Text(title)
+                }
             }
         }
         .listRowBackground(Color.clear)
-        .background(.clear)
         .onAppear {
             Task() {
                 title = await anime.getDefaultTitle()
-                imageUrl = await anime.getSmallImageURL()
+                imageUrl = anime.getSmallImageURL()
             }
         }
     }
 }
 
 #Preview {
-    SearchView().background(Color.green.opacity(0.2))
+    SearchView()
 }
